@@ -1,0 +1,158 @@
+/* src/App.css */
+body {
+  margin: 2rem;
+}
+img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+h1 {
+  font-size: 1.4rem;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+  margin: 0 auto;
+  min-height: calc(100vh + 10rem);
+}
+.content {
+  flex: 1;
+}
+.animeLeft {
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: animeLeft 0.3s forwards;
+}
+@keyframes animeLeft {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+.loading {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 10px solid #ccc;
+  border-right-color: transparent;
+  animation: loading 1s infinite;
+}
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* src/Components/Produtos.module.css */
+.Produtos_produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.Produtos_nome {
+  margin: 0.5rem 0;
+}
+
+/* src/Components/Header.module.css */
+.Header_header {
+  margin-bottom: 2rem;
+}
+.Header_header ul {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+.Header_header li {
+  margin-right: 1rem;
+}
+.Header_link {
+  display: block;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  color: black;
+  background: #eee;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+.active,
+.Header_link:hover {
+  background: #c2c2c2;
+}
+
+/* src/Components/Footer.module.css */
+.Footer_footer {
+  text-align: center;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  color: #aaa;
+  height: 10rem;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+
+/* src/Components/Contato.module.css */
+.Contato_contato {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.Contato_dados {
+  padding: 0px;
+  list-style: none;
+}
+.Contato_dados li {
+  font-size: 1.2rem;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  margin-bottom: 0.8rem;
+}
+.Contato_dados li::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 2px;
+  background: #ddd;
+  margin-right: 10px;
+}
+
+/* src/Components/Produto.module.css */
+.Produto_produto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.Produto_produto {
+  margin-bottom: 2rem;
+}
+.Produto_preco {
+  padding: 0.5rem;
+  background: #91fb5d;
+  color: #017e01;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  border-radius: 4px;
+}
+.Produto_descricao {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
